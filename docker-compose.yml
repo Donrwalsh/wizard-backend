@@ -17,3 +17,6 @@ services:
     ports:
       - 3000:3000
     command: npm run start
+
+volumes:
+  mongodb_data_container:
