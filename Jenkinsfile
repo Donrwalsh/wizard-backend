@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Build & Deploy') {
             steps {
-                sh 'docker stop wizard-backend_api_1'
-                sh 'docker remove wizard-backend_api_1'
+                sh 'docker stop wizard-backend_api_1 || true'
+                sh 'docker remove wizard-backend_api_1 || true'
                 sh 'docker-compose up -d --build'
             }
         }
