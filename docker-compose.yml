@@ -4,8 +4,8 @@ services:
     image: mongo:latest
     env_file:
       - .env
-
-    ports: -27017:27017
+    ports:
+      - 27017:27017
     volumes:
       - mongodb_data_container:/data/db
 
